@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ResultsComponent } from './results/results.component';
 import { HeroInfoComponent } from './hero-info/hero-info.component';
 import { NoResultComponent } from './no-result/no-result.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NoResultComponent } from './no-result/no-result.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
