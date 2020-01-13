@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: bangers;
+    src: url(assets/Bangers.ttf);
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #5294e2;
+    outline: 1px solid slategrey;
+    border-radius:20px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090d10; 
+  }
+   body{
+       background:#161c23 !important;
+       /*background:#272727;*/
+       color:#ddd !important;
+   }
+   .main{
+       width:100%;
+   }
+   .head-title h1{
+       font-family:bangers;
+       font-size:6rem;
+       color:#ddd;
+   }
+   
+   .head{
+       text-align: center;
+       padding:70px 5%;
+       background-image:url("assets/background3.png");
+       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
+
+   }
+   .sub-title p{
+       font-variant: small-caps;
+      font-weight: 500;
+      color:#ddd;
+   }
+   .search-box{
+       /*border:1px solid blue;*/
+       text-align:center;
+   }
+   .search-button{
+       background:#161c23;
+       color:#5294e2;
+       padding:10px 15px;
+       border:none;
+       border-radius:30px;
+        transition:box-shadow ease 0.3s;
+       box-shadow:-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ;
+   }
+   button:focus{
+       outline:none !important;
+   }
+   .search-button:focus{
+        outline: none;
+   }
+   .search-button:hover{
+        box-shadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
+    }
+   .search-inputbox{
+       background:#161c23;
+       color:#9ecdff;
+       padding:10px 20px;
+       border:none;
+       border-radius:30px;
+       box-shadow:inset 2px 2px 3px #090d10, inset  -2px -2px 3px #2b3744  ;
+   }
+   .search-inputbox:focus{
+       outline:none;
+   }
+   .search-inputbox::placeholder{
+       color:#9ecdff;
+       opacity:0.5 ;
+   }
+   .footer{
+       padding:70px 5%;
+       padding-top:40px;
+   }
+   .footer-content{
+       max-width:1200px !important;
+       margin:auto !important;
+   }
+   .footer-content .title{
+       font-family:bangers;
+   }
+   .superhero-api-link{
+       background-color:#161c23;
+       color:#5294e2;
+       padding:10px 15px;
+       border:none;
+       border-radius:30px;
+       font-weight: bold;
+       box-shadow:-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ;
+       margin-bottom:1rem;
+       transition: box-shadow ease 0.3s;
+   }
+   .superhero-api-link:hover{
+       box-shadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
+   }
+   .footer a{
+       color:#5294e2;
+       font-weight:bold;
+       transition: all ease 0.3s;
+   }
+   .footer a:hover{
+       color:#ddd;
+       text-decoration:none;
+   }
+   .end-credits{
+       text-align: center;
+   }
+   .footer .col-md-4{
+       margin-bottom:1rem;
+   }
+   @media screen and (max-width: 422px){
+       .head-title h1{
+           font-size:4rem;
+       }
+   }
+   @media screen and (max-width: 767px){
+       .footer{
+           text-align: center ;
+       }
+   }
+   .main-content{
+    padding:70px 5%;
+}
+
+   
