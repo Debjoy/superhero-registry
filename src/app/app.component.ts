@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'superhero-registry';
+
+  formGrp = new FormGroup({
+    search_query:new FormControl('')
+  });
+  onSearch(frm: FormControl){
+    console.log(frm.value.search_query);
+  }
 }

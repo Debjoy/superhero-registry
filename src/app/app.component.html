@@ -20,8 +20,10 @@
  		</div>
  		<div class="search-box">
  			<div class="search-input">
- 				<input type="text" class="search-inputbox" placeholder="Search">&nbsp; &nbsp;  
- 				<button class="search-button" routerLink="/results"><i class="fas fa-search"></i></button>
+ 				<form [formGroup]="formGrp" (ngSubmit)="onSearch(formGrp)">
+          <input type="text" formControlName="search_query" class="search-inputbox" placeholder="Search">&nbsp; &nbsp;  
+          <button class="search-button" ><i class="fas fa-search"></i></button>
+        </form>
  			</div>
  		</div>
  		<div class="main-content">
