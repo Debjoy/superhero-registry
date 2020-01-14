@@ -13,4 +13,8 @@ export class HttpcallsService {
   getResultsByName(name: string){
     return this._http.get(this._api_rooturl+this._token+'/search/'+name);
   }
+
+  getResultsById(_id: string){
+    return this._http.get(this._api_rooturl+this._token+'/'+_id);
+  }
 }

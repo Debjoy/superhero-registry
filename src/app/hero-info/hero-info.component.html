@@ -1,29 +1,29 @@
-<div class="hero-infobox">
+<div class="hero-infobox" *ngIf="info">
     <div class="container row">
         <div class="col-md-4">
             <div class="box">
-                <img src="https://www.superherodb.com/pictures2/portraits/10/100/85.jpg" class="img-fluid">
+                <img src="{{info.image['url']}}" class="img-fluid">
             </div>
         </div>
         <div class="col-md-5">
             <div class="box">
-                <h1 style="color:#5294e2"><strong>Iron Man</strong></h1><br>
+                <h1 style="color:#5294e2"><strong>{{info.name}}</strong></h1><br>
                 <p class="lead" style="font-weight:bold;opacity:0.7">BIOGRAPHY</p>
-                <p class="lead"><strong>Fullname/ Unmasked name: <span style="font-weight:bold;color:#5294e2">Tony Stark</span></strong><p>
-                <p class="lead"><strong>Place of Birth: <span style="font-weight:bold;color:#5294e2">Long Island, New York</span></strong><p>
-                <p class="lead"><strong>First Appearance: <span style="font-weight:bold;color:#5294e2">Tales of Suspence #39 (March, 1963)</span></strong><p>
-                <p class="lead"><strong>Publisher: <span style="font-weight:bold;color:#5294e2">Marvel Comics</span></strong><p>
+                <p class="lead"><strong>Fullname/ Unmasked name: <span style="font-weight:bold;color:#5294e2">{{info.biography['full-name']}}</span></strong><p>
+                <p class="lead"><strong>Place of Birth: <span style="font-weight:bold;color:#5294e2">{{info.biography['place-of-birth']}}</span></strong><p>
+                <p class="lead"><strong>First Appearance: <span style="font-weight:bold;color:#5294e2">{{info.biography['first-appearance']}}</span></strong><p>
+                <p class="lead"><strong>Publisher: <span style="font-weight:bold;color:#5294e2">{{info.biography['publisher']}}</span></strong><p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="box">
                 <p class="lead" style="font-weight:bold;opacity:0.7">APPEARANCE</p>
-                <p class="lead"><strong>Gender: <span style="font-weight:bold;color:#5294e2">Male</span></strong><p>
-                <p class="lead"><strong>Race: <span style="font-weight:bold;color:#5294e2">Human</span></strong><p>
-                <p class="lead"><strong>Height: <span style="font-weight:bold;color:#5294e2">6'6 or 198 cm</span></strong><p>
-                <p class="lead"><strong>Weight: <span style="font-weight:bold;color:#5294e2">425 lb or 191 kg</span></strong><p>
-                <p class="lead"><strong>Eye Color: <span style="font-weight:bold;color:#5294e2">Blue</span></strong><p>
-                <p class="lead"><strong>Hair Color: <span style="font-weight:bold;color:#5294e2">Black</span></strong><p>
+                <p class="lead"><strong>Gender: <span style="font-weight:bold;color:#5294e2">{{info.appearance['gender']}}</span></strong><p>
+                <p class="lead"><strong>Race: <span style="font-weight:bold;color:#5294e2">{{info.appearance['race']}}</span></strong><p>
+                <p class="lead"><strong>Height: <span style="font-weight:bold;color:#5294e2">{{info.appearance['height'][0]}} <i class="fas fa-exchange-alt" style="color:#ddd"></i> {{info.appearance['height'][1]}}</span></strong><p>
+                <p class="lead"><strong>Weight: <span style="font-weight:bold;color:#5294e2">{{info.appearance['weight'][0]}} <i class="fas fa-exchange-alt" style="color:#ddd"></i> {{info.appearance['weight'][1]}}</span></strong><p>
+                <p class="lead"><strong>Eye Color: <span style="font-weight:bold;color:#5294e2">{{info.appearance['eye-color']}}</span></strong><p>
+                <p class="lead"><strong>Hair Color: <span style="font-weight:bold;color:#5294e2">{{info.appearance['hair-color']}}</span></strong><p>
             </div>
         </div>
     </div>
@@ -35,31 +35,55 @@
 
         <div class="col-lg-4">
             <div class="power-box">
-                <img src="progress.svg">
+                <circle-progress
+                    [percent]="info.powerstats['intelligence']"
+                    [animation]="true"
+                    [animationDuration]="1000"
+                    ></circle-progress>
                 <p class="lead" style="margin-top:10px"><strong>Intelligence</strong></p>
             </div>
             <div class="power-box">
-                <img src="progress.svg">
+                <circle-progress
+                    [percent]="info.powerstats['strength']"
+                    [animation]="true"
+                    [animationDuration]="1000"
+                    ></circle-progress>
                 <p class="lead" style="margin-top:10px"><strong>Strength</strong></p>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="power-box">
-                <img src="progress.svg">
+                <circle-progress
+                    [percent]="info.powerstats['speed']"
+                    [animation]="true"
+                    [animationDuration]="1000"
+                    ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px;"><strong>Speed</strong></p>
             </div>
             <div class="power-box">
-                <img src="progress.svg">
+                <circle-progress
+                    [percent]="info.powerstats['durability']"
+                    [animation]="true"
+                    [animationDuration]="1000"
+                    ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px"><strong>Durability</strong></p>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="power-box">
-                <img src="progress.svg">
+                <circle-progress
+                    [percent]="info.powerstats['power']"
+                    [animation]="true"
+                    [animationDuration]="1000"
+                    ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px"><strong>Power</strong></p>
             </div>
             <div class="power-box">
-                <img src="progress.svg">
+                <circle-progress
+                    [percent]="info.powerstats['combat']"
+                    [animation]="true"
+                    [animationDuration]="1000"
+                    ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px"><strong>Combat</strong></p>
             </div>
         </div>
@@ -68,10 +92,10 @@
     <div class="extra-content">
         <br><br>
         <div class="extra-head">
-            <h3 > IS MISIDENTIFIED AS </h3>
+            <h3 > IS ALIASED AS </h3>
         </div>
         <div class="extra">
-            <span class="quote-aliases"> Iron Knight </span > , <span class="quote-aliases"> Hogan Pots </span > , <span class="quote-aliases"> Spare Parts Man </span > , <span class="quote-aliases"> Cobalt Man II </span > , <span class="quote-aliases"> Crimson Dynamo </span > , <span class="quote-aliases"> Ironman </span > ,  
+            <span *ngFor="let alias of info.biography['aliases']"><span class="quote-aliases"> {{alias}} </span > ,</span>   
         </div>
     </div>
     <div class="extra-content">
@@ -80,7 +104,7 @@
             <h3 style="font-size:2rem"> IS A PART OF </h3>
         </div>
         <div class="extra extra-small">
-            Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense.  
+            {{info.connections['group-affiliation']}}  
         </div>
     </div>
     <div class="extra-content">
@@ -89,7 +113,7 @@
             <h3 style="font-size:2rem"> OCCUPATION </h3>
         </div>
         <div class="extra extra-med">
-            <span class="quote-aliases">Inventor, Industrialist; former United States Secretary of Defense </span>
+            <span class="quote-aliases">{{info.work['occupation']}}</span>
         </div>
     </div>
     <div class="extra-content">
@@ -98,7 +122,7 @@
             <h3 style="font-size:2rem"> RELATIONS </h3>
         </div>
         <div class="extra extra-small">
-            Howard Anthony Stark (father, deceased), Maria Stark (mother, deceased), Morgan Stark (cousin), Isaac Stark (ancestor) 
+            {{info.connections['relatives']}}
         </div>
     </div><br><br>
     <hr style="border-color:white;opacity:0.3;max-width:400px">

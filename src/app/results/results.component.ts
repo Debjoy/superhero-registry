@@ -10,7 +10,9 @@ import { HttpcallsService } from '../httpcalls.service';
 export class ResultsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private _http: HttpcallsService) { }
+
   searchData:any;
+  
   ngOnInit() {
     this.route.paramMap.subscribe(
       param=>{
