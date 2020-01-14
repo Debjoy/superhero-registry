@@ -20,7 +20,7 @@
  		</div>
  		<div class="search-box">
  			<div class="search-input">
- 				<form [formGroup]="formGrp" (ngSubmit)="onSearch(formGrp)">
+ 				<form [formGroup]="formGrp" (ngSubmit)="onSearch()">
           <input type="text" formControlName="search_query" class="search-inputbox" placeholder="Search">&nbsp; &nbsp;  
           <button class="search-button" ><i class="fas fa-search"></i></button>
         </form>
