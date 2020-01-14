@@ -1,0 +1,10 @@
+.no-content{
+    max-width:1000px;
+    margin:auto;
+}
+.enter-something{
+    font-size:3rem;
+    text-align:center;
+    color:#5294e2;
+    opacity:0.7;
+}
