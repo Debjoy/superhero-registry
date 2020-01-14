@@ -10,7 +10,7 @@
                 <h4 class="lead" style="margin:0">{{data.biography['full-name']}}</h4>
                 <p style="font-weight:bold;font-size:1.2rem;margin:0">{{data.biography['place-of-birth']}}</p>
                 <p class="lead">{{data.biography['publisher']}}</p>
-                <button routerLink="/details">Read More <i class="fas fa-angle-double-right"></i></button>
+                <button [routerLink]="['/details',data.id]">Read More <i class="fas fa-angle-double-right"></i></button>
 
             </div>
         </div>

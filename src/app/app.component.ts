@@ -18,7 +18,7 @@ export class AppComponent {
   constructor(private service:HttpcallsService, private router:Router){}
 
   onSearch(){
-    this.router.navigate(['',this.formGrp.value.search_query]);
+    this.router.navigate(['search',this.formGrp.value.search_query]);
   }
 
   ontype(frm: FormControl){

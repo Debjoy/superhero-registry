@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-hero-info',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private routeParam: ActivatedRoute) { }
 
   ngOnInit() {
+    this.routeParam.paramMap.subscribe(
+      param=>{
+        console.log(param);
+      }
+    );
   }
 
 }

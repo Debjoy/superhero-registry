@@ -6,9 +6,11 @@ import { HeroInfoComponent } from './hero-info/hero-info.component';
 
 
 const routes: Routes = [
-  {path: ':search' , component : ResultsComponent},
   {path: '' , component : NoResultComponent},
-  {path: 'details' , component: HeroInfoComponent}
+  {path: 'search/:query' , component : ResultsComponent},
+  {path: 'details/:id' , component: HeroInfoComponent},
+  {path: 'details' , redirectTo: ''},
+  {path: 'search' , redirectTo: ''}
 ];
 
 @NgModule({

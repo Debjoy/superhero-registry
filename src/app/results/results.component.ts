@@ -14,7 +14,7 @@ export class ResultsComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(
       param=>{
-        this._http.getResultsByName(param.get('search')).subscribe(
+        this._http.getResultsByName(param.get('query')).subscribe(
           res=>{
             this.searchData=res;
           }
