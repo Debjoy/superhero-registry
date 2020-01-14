@@ -2,7 +2,7 @@
     <div class="col-lg-6 result-box"  *ngFor="let data of searchData.results">
         <div class="result-card container row">
             <div class="col-sm-6 image">
-                <img src="{{data.image['url']}}" class="img-fluid">
+                <img src="{{data.image['url']}}" onError="this.src='assets/place.png'" class="img-fluid">
             </div>
             <div class="col-sm-6 details">
 
