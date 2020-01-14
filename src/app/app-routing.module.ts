@@ -6,8 +6,8 @@ import { HeroInfoComponent } from './hero-info/hero-info.component';
 
 
 const routes: Routes = [
+  {path: ':search' , component : ResultsComponent},
   {path: '' , component : NoResultComponent},
-  {path: 'results' , component : ResultsComponent},
   {path: 'details' , component: HeroInfoComponent}
 ];
 
