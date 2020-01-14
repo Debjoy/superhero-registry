@@ -1,31 +1,17 @@
-<div class="container row result-content">
-    <div class="col-lg-6 result-box">
+<div class="container row result-content" *ngIf="searchData">
+    <div class="col-lg-6 result-box"  *ngFor="let data of searchData.results">
         <div class="result-card container row">
             <div class="col-sm-6 image">
-                <img src="https://www.superherodb.com/pictures2/portraits/10/100/85.jpg" class="img-fluid">
+                <img src="{{data.image['url']}}" class="img-fluid">
             </div>
             <div class="col-sm-6 details">
 
-                <h2>Iron Man</h2>
-                <h4 class="lead" style="margin:0">Tony Stark</h4>
-                <p style="font-weight:bold;font-size:1.2rem;margin:0">Long Island, New York</p>
-                <p class="lead">MARVEL COMICS</p>
+                <h2>{{data.name}}</h2>
+                <h4 class="lead" style="margin:0">{{data.biography['full-name']}}</h4>
+                <p style="font-weight:bold;font-size:1.2rem;margin:0">{{data.biography['place-of-birth']}}</p>
+                <p class="lead">{{data.biography['publisher']}}</p>
                 <button routerLink="/details">Read More <i class="fas fa-angle-double-right"></i></button>
 
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-6 result-box">
-        <div class="result-card container row">
-            <div class="col-sm-6">
-                <img src="https://www.superherodb.com/pictures2/portraits/10/100/1120.jpg" class="img-fluid">
-            </div>
-            <div class="col-sm-6 details">
-                <h2>Iron Fist</h2>
-                <h4 class="lead" style="margin:0">Danny Rand</h4>
-                <p style="font-weight:bold;font-size:1.2rem;margin:0">-</p>
-                <p class="lead">MARVEL COMICS</p>
-                <button routerLink="/details">Read More <i class="fas fa-angle-double-right"></i></button>
             </div>
         </div>
     </div>
