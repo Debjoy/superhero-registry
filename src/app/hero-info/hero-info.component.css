@@ -7,9 +7,6 @@
     margin:0;
     min-width: 100%;
 }
-.hero-infobox .container .col-md-4{
-
-}
 .hero-infobox .container .col-md-3{
    align-self:center;
 }
@@ -65,4 +62,20 @@
 }
 .extra-med{
    font-size:1.7rem;
+}
+.back-button{
+    background:#161c23;
+    color:#5294e2;
+    padding:15px 25px;
+    border:none;
+    border-radius:50px;
+    transition:box-shadow ease 0.3s;
+    margin:auto;
+    font-weight:bold;
+    font-size:1.5rem;
+    box-shadow:-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ;
+    transition:box-shadow ease 0.3s;
+}
+.back-button:hover{
+    box-shadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
 }

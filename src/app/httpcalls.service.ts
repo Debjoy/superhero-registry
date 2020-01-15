@@ -16,5 +16,6 @@ export class HttpcallsService {
 
   getResultsById(_id: string){
     return this._http.get(this._api_rooturl+this._token+'/'+_id);
+    //return this._http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/346.json');
   }
 }

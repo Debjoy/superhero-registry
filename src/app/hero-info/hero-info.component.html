@@ -1,4 +1,4 @@
-<div class="hero-infobox" *ngIf="info">
+<div class="hero-infobox" *ngIf="info && !loadingFlag">
     <div class="container row">
         <div class="col-md-4">
             <div class="box">
@@ -125,5 +125,13 @@
             {{info.connections['relatives']}}
         </div>
     </div><br><br>
-    <hr style="border-color:white;opacity:0.3;max-width:400px">
+    <div style="width:100%;text-align:center">
+        <button class="back-button" (click)="goback()"><i class="fas fa-arrow-left"></i> &nbsp;Back </button>
+    </div>
+    <br>
+</div>
+<div class="container row result-content" *ngIf="loadingFlag">
+    <br><br><br><br><br><br><br><br>
+    <img src="assets/progress.svg" style="margin:auto;height:100px">
+    <br><br><br><br><br><br><br><br>
 </div>
