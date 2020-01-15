@@ -39,14 +39,17 @@
                     [percent]="info.powerstats['intelligence']"
                     [animation]="true"
                     [animationDuration]="1000"
+                    [outerStrokeColor]="info.powerstats['intelligence']==100 ? '#28a745' : (info.powerstats['intelligence']>50 ? '#5294e2' : '#ffc107')"
                     ></circle-progress>
                 <p class="lead" style="margin-top:10px"><strong>Intelligence</strong></p>
-            </div>
+            </div>   
+             <!-- stroke: #ffc107; -->
             <div class="power-box">
                 <circle-progress
                     [percent]="info.powerstats['strength']"
                     [animation]="true"
                     [animationDuration]="1000"
+                    [outerStrokeColor]="info.powerstats['strength']==100 ? '#28a745' : (info.powerstats['strength']>50 ? '#5294e2' : '#ffc107')"
                     ></circle-progress>
                 <p class="lead" style="margin-top:10px"><strong>Strength</strong></p>
             </div>
@@ -57,6 +60,7 @@
                     [percent]="info.powerstats['speed']"
                     [animation]="true"
                     [animationDuration]="1000"
+                    [outerStrokeColor]="info.powerstats['speed']==100 ? '#28a745' : (info.powerstats['speed']>50 ? '#5294e2' : '#ffc107')"
                     ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px;"><strong>Speed</strong></p>
             </div>
@@ -65,6 +69,7 @@
                     [percent]="info.powerstats['durability']"
                     [animation]="true"
                     [animationDuration]="1000"
+                    [outerStrokeColor]="info.powerstats['durability']==100 ? '#28a745' : (info.powerstats['durability']>50 ? '#5294e2' : '#ffc107')"
                     ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px"><strong>Durability</strong></p>
             </div>
@@ -75,6 +80,7 @@
                     [percent]="info.powerstats['power']"
                     [animation]="true"
                     [animationDuration]="1000"
+                    [outerStrokeColor]="info.powerstats['power']==100 ? '#28a745' : (info.powerstats['power']>50 ? '#5294e2' : '#ffc107')"
                     ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px"><strong>Power</strong></p>
             </div>
@@ -83,6 +89,7 @@
                     [percent]="info.powerstats['combat']"
                     [animation]="true"
                     [animationDuration]="1000"
+                    [outerStrokeColor]="info.powerstats['combat']==100 ? '#28a745' : (info.powerstats['combat']>50 ? '#5294e2' : '#ffc107')"
                     ></circle-progress>
                 <p class="lead" style="margin:0px;margin-top:10px"><strong>Combat</strong></p>
             </div>
