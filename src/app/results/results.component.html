@@ -2,13 +2,13 @@
     <div class="col-lg-6 result-box"  *ngFor="let data of searchData.results">
         <div class="result-card container row">
             <div class="col-sm-6 image">
-                <img src="{{data.image['url']}}" onError="this.src='assets/place.png'" class="img-fluid">
+                <img src="{{data.image.url}}" onError="this.src='assets/place.png'" class="img-fluid">
             </div>
             <div class="col-sm-6 details">
 
                 <h2>{{data.name}}</h2>
-                <h4 class="lead" style="margin:0">{{data.biography['full-name']}}</h4>
-                <p style="font-weight:bold;font-size:1.2rem;margin:0">{{data.biography['place-of-birth']}}</p>
+                <h4 class="lead" style="margin:0">{{data.biography['full_name']}}</h4>
+                <p style="font-weight:bold;font-size:1.2rem;margin:0">{{data.biography['place_of_birth']}}</p>
                 <p class="lead">{{data.biography['publisher']}}</p>
                 <button [routerLink]="['/details',data.id]">Read More <i class="fas fa-angle-double-right"></i></button>
 

@@ -2,16 +2,16 @@
     <div class="container row">
         <div class="col-md-4">
             <div class="box">
-                <img src="{{info.image['url']}}" class="img-fluid">
+                <img src="{{info.image['lg']}}" class="img-fluid">
             </div>
         </div>
         <div class="col-md-5">
             <div class="box">
                 <h1 style="color:#5294e2"><strong>{{info.name}}</strong></h1><br>
                 <p class="lead" style="font-weight:bold;opacity:0.7">BIOGRAPHY</p>
-                <p class="lead"><strong>Fullname/ Unmasked name: <span style="font-weight:bold;color:#5294e2">{{info.biography['full-name']}}</span></strong><p>
-                <p class="lead"><strong>Place of Birth: <span style="font-weight:bold;color:#5294e2">{{info.biography['place-of-birth']}}</span></strong><p>
-                <p class="lead"><strong>First Appearance: <span style="font-weight:bold;color:#5294e2">{{info.biography['first-appearance']}}</span></strong><p>
+                <p class="lead"><strong>Fullname/ Unmasked name: <span style="font-weight:bold;color:#5294e2">{{info.biography['full_name']}}</span></strong><p>
+                <p class="lead"><strong>Place of Birth: <span style="font-weight:bold;color:#5294e2">{{info.biography['place_of_birth']}}</span></strong><p>
+                <p class="lead"><strong>First Appearance: <span style="font-weight:bold;color:#5294e2">{{info.biography['first_appearance']}}</span></strong><p>
                 <p class="lead"><strong>Publisher: <span style="font-weight:bold;color:#5294e2">{{info.biography['publisher']}}</span></strong><p>
             </div>
         </div>
@@ -22,24 +22,24 @@
                 <p class="lead"><strong>Race: <span style="font-weight:bold;color:#5294e2">{{info.appearance['race']}}</span></strong><p>
                 <p class="lead"><strong>Height: <span style="font-weight:bold;color:#5294e2">{{info.appearance['height'][0]}} <i class="fas fa-exchange-alt" style="color:#ddd"></i> {{info.appearance['height'][1]}}</span></strong><p>
                 <p class="lead"><strong>Weight: <span style="font-weight:bold;color:#5294e2">{{info.appearance['weight'][0]}} <i class="fas fa-exchange-alt" style="color:#ddd"></i> {{info.appearance['weight'][1]}}</span></strong><p>
-                <p class="lead"><strong>Eye Color: <span style="font-weight:bold;color:#5294e2">{{info.appearance['eye-color']}}</span></strong><p>
-                <p class="lead"><strong>Hair Color: <span style="font-weight:bold;color:#5294e2">{{info.appearance['hair-color']}}</span></strong><p>
+                <p class="lead"><strong>Eye Color: <span style="font-weight:bold;color:#5294e2">{{info.appearance['eye_color']}}</span></strong><p>
+                <p class="lead"><strong>Hair Color: <span style="font-weight:bold;color:#5294e2">{{info.appearance['hair_color']}}</span></strong><p>
             </div>
         </div>
     </div>
     <br>
     <div class="container row powerstats">
         <div class="power-heading" style="width:100%;text-align:center;margin-bottom:25px">
-            <h1 ><i class="fas fa-bolt" style="color:#5294e2"></i><span style="opacity:1;"> POWER STATS</span> <i class="fas fa-bolt" style="color:#5294e2"></i></h1>
+            <h1 ><i class="fas fa-bolt" style="color:#5294e2"></i><span style="opacity:1;"> POWER STATS </span> <i class="fas fa-bolt" style="color:#5294e2"></i></h1>
         </div>
 
         <div class="col-lg-4">
             <div class="power-box">
                 <circle-progress
-                    [percent]="info.powerstats['intelligence']"
+                    [percent]="info.powerstats.intelligence"
                     [animation]="true"
                     [animationDuration]="1000"
-                    [outerStrokeColor]="info.powerstats['intelligence']==100 ? '#28a745' : (info.powerstats['intelligence']>50 ? '#5294e2' : '#ffc107')"
+                    [outerStrokeColor]="info.powerstats.intelligence==100 ? '#28a745' : (info.powerstats.intelligence>50 ? '#5294e2' : '#ffc107')"
                     ></circle-progress>
                 <p class="lead" style="margin-top:10px"><strong>Intelligence</strong></p>
             </div>   
@@ -111,7 +111,7 @@
             <h3 style="font-size:2rem"> IS A PART OF </h3>
         </div>
         <div class="extra extra-small">
-            {{info.connections['group-affiliation']}}  
+            {{info.connections['group_affiliation']}}  
         </div>
     </div>
     <div class="extra-content">
