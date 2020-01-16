@@ -50,3 +50,11 @@
         margin-bottom:20px;
     }
 }
+.empty-msg{
+    font-size: 2.5rem;
+    color: #92b3d6;
+    margin: auto;
+    text-align: center;
+    max-width: 600px;
+    padding: 50px 5%;
+}

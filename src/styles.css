@@ -40,7 +40,8 @@
    .sub-title p{
        font-variant: small-caps;
       font-weight: 500;
-      color:#ddd;
+      color: #80bdff;
+    opacity: 0.8;
    }
    .search-box{
        /*border:1px solid blue;*/

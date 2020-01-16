@@ -15,6 +15,7 @@
             </div>
         </div>
     </div>
+    <div *ngIf="searchData.results.length==0"  class="empty-msg">Sorry, but no data found matching your query<br><i class="fas fa-frown" style="color:#cecece"></i></div>
 </div>
 <div class="container row result-content" *ngIf="loadingFlag">
     <br><br><br><br><br><br><br><br>
