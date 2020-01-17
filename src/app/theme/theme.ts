@@ -32,12 +32,12 @@ export const light: Theme={
     properties: {
         "--mainbackground-default": "#eee",
         "--maintextcolor-default":" #161c23",
-        "--mainsubtitle":"#007aff",
+        "--mainsubtitle":"#5294e2",//"#007aff"
     
         "--inputBoxColor":"#007cff",
     
         "--primaryColor":"#5294e2",
-        "--primaryDark":"#2a8cff",
+        "--primaryDark":"#5294e2",//"#2a8cff"
     
         "--SmallBoxShadow":"-2px -2px 3px #ffffff ,2px 2px 3px #c8c8c8" ,
         "--LargeBoxShadow":"-4px -4px 5px #ffffff ,4px 4px 5px #c8c8c8 ",
