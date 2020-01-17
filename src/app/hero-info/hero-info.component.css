@@ -65,7 +65,7 @@
 }
 .back-button{
     background:var(--mainbackground-default) ;
-    color:var(--primaryColor);
+    color:var(--primaryDark);
     padding:15px 25px;
     border:none;
     border-radius:50px;

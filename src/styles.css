@@ -25,6 +25,8 @@
     --lightThemeBoxShadow:none;
     --darkThemeBoxShadow:inset 2px 2px 3px #090d10, inset  -2px -2px 3px #2b3744  ;
 
+    --footerImageFilter:  none;
+
 }
   body::-webkit-scrollbar {
     width: 10px;
@@ -44,6 +46,9 @@
    }
    .main{
        width:100%;
+       background-image:url("assets/background3.png");
+       background-size: contain;
+       background-repeat: no-repeat;
    }
    .head-title h1{
        font-family:bangers;
@@ -54,10 +59,6 @@
    .head{
        text-align: center;
        padding:70px 5%;
-       background-image:url("assets/background3.png");
-       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: bottom;
 
    }
    .sub-title p{
@@ -115,7 +116,7 @@
    }
    .superhero-api-link{
        background-color:var(--mainbackground-default) ;
-       color:var(--primaryColor);
+       color:var(--primaryDark);
        padding:10px 15px;
        border:none;
        border-radius:30px;
@@ -128,7 +129,7 @@
        box-shadow:var(--LargeBoxShadow) ;
    }
    .footer a{
-       color:var(--primaryColor);
+       color:var(--primaryDark);
        font-weight:bold;
        transition: all ease 0.3s;
    }
@@ -174,9 +175,14 @@
 .theme-toggle .dark{
     background:var(--mainbackground-default);
     color:var(--primaryColor);
+    background:#161c23;
     border:none;
     box-shadow:var(--darkThemeBoxShadow);
     padding:5px 15px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+.footer-content img{
+    filter:var(--footerImageFilter);
 }
