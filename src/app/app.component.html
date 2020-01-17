@@ -48,12 +48,12 @@
 						<h3>Options</h3>
 					 </div>
 					<div class="theme-toggle" >
-							<span>Theme:</span> &nbsp;&nbsp;
+							<span><strong>Theme:</strong></span> &nbsp;&nbsp;
 							<button class="dark" (click)="setDark()"> <i class="fas fa-moon"></i></button>
 							<button class="light" (click)="setLight()"><i class="fas fa-sun"></i> </button>
 					</div>
 					<div class="theme-toggle" >
-							<p>Image:</p>
+							<strong>Image:</strong><br>
 							<span>Colored:</span> &nbsp;&nbsp;
 							<button class="colorise colored" (click)="setColored()"> <i class="fas fa-circle" *ngIf="colored"></i> <i class="far fa-circle" *ngIf="!colored"></i> 	</button><br>
 							<span>Filtered:</span> &nbsp;&nbsp;&nbsp;
@@ -74,7 +74,7 @@
  					<a href=""><p>My Portfolio</p></a>
  				</div>
  			</div>
- 			<div class="end-credits">made with <i class="fas fa-heart" style="color:#5294e2"></i> by <a href="">Debjoy</a></div>
+ 			<div class="end-credits">made with <i class="fas fa-heart" style="color:var(--primaryDark);"></i> by <a href="">Debjoy</a></div>
  		</div>
  	</div>
  </body>

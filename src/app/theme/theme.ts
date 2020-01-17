@@ -51,37 +51,16 @@ export const light: Theme={
 }
 
 
-export const coloredDark: Theme={
-    name: "coloredDark",
+export const colored: Theme={
+    name: "colored",
     properties: {
-        "--imageColorFilter":"none",
-        "--coloredBoxShadow":"inset 2px 2px 3px #090d10, inset  -2px -2px 3px #2b3744",
-        "--filteredBoxShadow":"-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 "
-    }
-}
-export const coloredLight: Theme={
-    name: "coloredLight",
-    properties: {
-        "--imageColorFilter":"none",
-        "--coloredBoxShadow":"inset 2px 2px 3px  #ffffff, inset  -2px -2px 3px #c8c8c8",
-        "--filteredBoxShadow":"-2px -2px 3px #c8c8c8 ,2px 2px 3px  #ffffff "
+        "--imageColorFilter":"none"
     }
 }
 
-export const filteredDark: Theme={
-    name: "filteredDark",
+export const filtered: Theme={
+    name: "filtered",
     properties: {
-        "--imageColorFilter":"sepia(0.8) hue-rotate(180deg) brightness(0.8) contrast(1.3)",
-        "--coloredBoxShadow":"-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ",
-        "--filteredBoxShadow":"inset 2px 2px 3px #090d10, inset  -2px -2px 3px #2b3744"
-    }
-}
-
-export const filteredLight: Theme={
-    name: "filteredLight",
-    properties: {
-        "--imageColorFilter":"sepia(0.8) hue-rotate(180deg) brightness(0.8) contrast(1.3)",
-        "--coloredBoxShadow":"-2px -2px 3px #c8c8c8 ,2px 2px 3px #ffffff ",
-        "--filteredBoxShadow":"inset 2px 2px 3px #ffffff, inset  -2px -2px 3px #c8c8c8"
+        "--imageColorFilter":"sepia(0.8) hue-rotate(180deg) brightness(0.8) contrast(1.3)"
     }
 }

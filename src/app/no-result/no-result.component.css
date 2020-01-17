@@ -5,6 +5,6 @@
 .enter-something{
     font-size:3rem;
     text-align:center;
-    color:#5294e2;
+    color:var(--primaryDark);;
     opacity:0.7;
 }

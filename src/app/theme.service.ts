@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Theme , light, dark, coloredDark, filteredDark, coloredLight,filteredLight } from './theme/theme';
+import { Theme , light, dark, colored, filtered } from './theme/theme';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
   private active: Theme= dark;
-  private availableThemes: Theme[]=[light, dark, coloredDark, filteredDark, coloredLight ,filteredLight];
+  private availableThemes: Theme[]=[light, dark, colored, filtered];
   
-  private colored=false;
   getAvailableThemes(): Theme[] {
     return this.availableThemes;
   }
@@ -23,44 +22,18 @@ export class ThemeService {
 
   setDarkTheme(): void {
     this.setActiveTheme(dark);
-    if(this.colored)
-    this.setColored();
-    else
-    this.setFiltered();
+  }
+
+  setColored():void{
+    this.setActiveTheme(colored);
+  }
+
+  setFiltered():void{
+    this.setActiveTheme(filtered);
   }
 
   setLightTheme(): void {
     this.setActiveTheme(light);
-    if(this.colored)
-    this.setColored();
-    else
-    this.setFiltered();
-  }
-
-  setColored():void{
-    this.colored=true;
-    if(this.isDarkTheme())
-    this.setActiveColor(coloredDark);
-    else
-    this.setActiveColor(coloredLight)
-  }
-
-  setFiltered():void{
-    this.colored=false;
-    if(this.isDarkTheme())
-    this.setActiveColor(filteredDark);
-    else
-    this.setActiveColor(filteredLight);
-  }
-
-
-  setActiveColor(theme: Theme):void{
-    Object.keys(theme.properties).forEach(property => {
-      document.documentElement.style.setProperty(
-        property,
-        theme.properties[property]
-      );
-    }); 
   }
 
   setActiveTheme(theme: Theme): void {
