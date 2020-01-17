@@ -55,9 +55,9 @@
 					<div class="theme-toggle" >
 							<p>Image:</p>
 							<span>Colored:</span> &nbsp;&nbsp;
-							<button class="colorise colored" (click)="setColored()"> <i class="fas fa-circle"></i>  	</button><br>
+							<button class="colorise colored" (click)="setColored()"> <i class="fas fa-circle" *ngIf="colored"></i> <i class="far fa-circle" *ngIf="!colored"></i> 	</button><br>
 							<span>Filtered:</span> &nbsp;&nbsp;&nbsp;
-							<button class="colorise filtered" (click)="setFiltered()"> <i class="far fa-circle"></i> </button>
+							<button class="colorise filtered" (click)="setFiltered()"> <i class="far fa-circle" *ngIf="colored"></i><i class="fas fa-circle" *ngIf="!colored"></i>  </button>
 					</div>
 					 
  				</div>

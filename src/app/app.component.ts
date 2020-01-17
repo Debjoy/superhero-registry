@@ -15,6 +15,7 @@ export class AppComponent {
     search_query:new FormControl('')
   });
   results:any;
+  colored=false;
 
   constructor(private service:HttpcallsService, private router:Router, private theme:ThemeService){}
 
@@ -34,8 +35,10 @@ export class AppComponent {
   }
   setColored(){
     this.theme.setColored();
+    this.colored=true;
   }
   setFiltered(){
     this.theme.setFiltered();
+    this.colored=false;
   }
 }
