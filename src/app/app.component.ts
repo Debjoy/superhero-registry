@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { HttpcallsService } from './httpcalls.service';
 import { Router } from '@angular/router';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   });
   results:any;
 
-  constructor(private service:HttpcallsService, private router:Router){}
+  constructor(private service:HttpcallsService, private router:Router, private theme:ThemeService){}
 
   onSearch(){
     this.router.navigate(['search',this.formGrp.value.search_query]);
@@ -23,5 +24,12 @@ export class AppComponent {
 
   ontype(frm: FormControl){
     this.service.getResultsByName(frm.value.search_query).subscribe(res=>{console.log(res)});
+  }
+
+  setDark(){
+    this.theme.setDarkTheme();
+  }
+  setLight(){
+    this.theme.setLightTheme();
   }
 }

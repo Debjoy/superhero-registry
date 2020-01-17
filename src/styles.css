@@ -15,12 +15,15 @@
     --inputBoxColor:#9ecdff;
 
     --primaryColor:#5294e2;
+    --primaryDark:#5294e2;
 
     --SmallBoxShadow:-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ;
     --LargeBoxShadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
     --MediumBoxShadow:-3px -3px 4px #2b3744 ,3px 3px 4px #090d10 ;
 
     --inputBoxInsetShadow:inset 2px 2px 3px #090d10, inset  -2px -2px 3px #2b3744  ;
+    --lightThemeBoxShadow:none;
+    --darkThemeBoxShadow:inset 2px 2px 3px #090d10, inset  -2px -2px 3px #2b3744  ;
 
 }
   body::-webkit-scrollbar {
@@ -153,4 +156,27 @@
     padding:70px 5%;
 }
 
-   
+.theme-toggle{
+    width:100%;
+    text-align:center;  
+    padding:10px;
+}
+.theme-toggle .light{
+    border:none;
+    background:#ddd;
+    padding:5px 15px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color:var(--primaryDark);
+    box-shadow:var(--lightThemeBoxShadow);
+}
+
+.theme-toggle .dark{
+    background:var(--mainbackground-default);
+    color:var(--primaryColor);
+    border:none;
+    box-shadow:var(--darkThemeBoxShadow);
+    padding:5px 15px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
