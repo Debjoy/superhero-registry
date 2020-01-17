@@ -15,7 +15,7 @@
 }
 .hero-infobox .container .col-md-4 .box{
     border-radius:25px;
-    box-shadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
+    box-shadow:var(--LargeBoxShadow);
     display:inline-block;
     margin-bottom:30px;
 }
@@ -38,7 +38,7 @@
     margin:10px;
     padding:10px 0px;
     border-radius:20px;
-    box-shadow:-3px -3px 4px #2b3744 ,3px 3px 4px #090d10 ;
+    box-shadow:var(--MediumBoxShadow);
 }
 /* .powerstats .col-lg-4 .power-box p{
 } */
@@ -53,7 +53,7 @@
     font-weight:600;
 }
 .quote-aliases{
-   color:#5294e2;
+   color:var(--primaryColor);
    display:inline-block;
 }
 .extra-small{
@@ -64,8 +64,8 @@
    font-size:1.7rem;
 }
 .back-button{
-    background:#161c23;
-    color:#5294e2;
+    background:var(--mainbackground-default) ;
+    color:var(--primaryColor);
     padding:15px 25px;
     border:none;
     border-radius:50px;
@@ -73,9 +73,9 @@
     margin:auto;
     font-weight:bold;
     font-size:1.5rem;
-    box-shadow:-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ;
+    box-shadow:var(--SmallBoxShadow) ;
     transition:box-shadow ease 0.3s;
 }
 .back-button:hover{
-    box-shadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
+    box-shadow:var(--LargeBoxShadow) ;
 }

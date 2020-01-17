@@ -11,7 +11,7 @@
     margin:0;
     margin:auto;
     padding:0px;
-    box-shadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
+    box-shadow:var(--LargeBoxShadow) ;
 }
 .result-card .col-sm-6{
     margin:0px;
@@ -23,20 +23,20 @@
     filter: sepia(0.8) hue-rotate(180deg) brightness(0.8) contrast(1.3);
 }
 .result-card .details h2{
-    color:#5294e2;
+    color:var(--primaryColor);
 }
 .result-card .details button{
-    background-color:#161c23;
-    color:#5294e2;
+    background-color:var(--mainbackground-default) ;
+    color:var(--primaryColor);
     padding:10px 15px;
     border:none;
     border-radius:30px;
     font-weight: bold;
-    box-shadow:-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ;
+    box-shadow:var(--SmallBoxShadow)  ;
     transition:all ease 0.3s;
 }
 .result-card .details button:hover{
-    box-shadow:-4px -4px 5px #2b3744 ,4px 4px 5px #090d10 ;
+    box-shadow:var(--LargeBoxShadow) ;
 }
 .result-card .details p{
     opacity:0.7;
@@ -52,7 +52,7 @@
 }
 .empty-msg{
     font-size: 2.5rem;
-    color: #92b3d6;
+    color: var(--inputBoxColor);
     margin: auto;
     text-align: center;
     max-width: 600px;
