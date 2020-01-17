@@ -18,6 +18,7 @@
     box-shadow:var(--LargeBoxShadow);
     display:inline-block;
     margin-bottom:30px;
+    background:var(--mainbackground-default);
 }
 .hero-infobox .container .col-md-4 .box img{
     border-radius:20px;

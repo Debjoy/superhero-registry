@@ -72,7 +72,7 @@
    }
    .search-button{
        background:var(--mainbackground-default) ;
-       color:var(--primaryColor);
+       color:var(--primaryDark);
        padding:10px 15px;
        border:none;
        border-radius:30px;
@@ -164,7 +164,7 @@
 }
 .theme-toggle .light{
     border:none;
-    background:#ddd;
+    background:#eee;
     padding:5px 15px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
