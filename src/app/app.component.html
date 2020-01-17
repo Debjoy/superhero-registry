@@ -44,9 +44,22 @@
  					<a href=""><button class="superhero-api-link">SuperHero API <i class="fas fa-external-link-square-alt"></i></button></a>
  				</div>
  				<div class="col-md-4">
- 					<img src="assets/dc.png" height="150px">
- 					<img src="assets/marvel.png" height="150px">
- 					
+ 					<div class="option-heading">
+						<h3>Options</h3>
+					 </div>
+					<div class="theme-toggle" >
+							<span>Theme:</span> &nbsp;&nbsp;
+							<button class="dark" (click)="setDark()"> <i class="fas fa-moon"></i></button>
+							<button class="light" (click)="setLight()"><i class="fas fa-sun"></i> </button>
+					</div>
+					<div class="theme-toggle" >
+							<p>Image:</p>
+							<span>Colored:</span> &nbsp;&nbsp;
+							<button class="colorise colored" (click)="setColored()"> <i class="fas fa-circle"></i>  	</button><br>
+							<span>Filtered:</span> &nbsp;&nbsp;&nbsp;
+							<button class="colorise filtered" (click)="setFiltered()"> <i class="far fa-circle"></i> </button>
+					</div>
+					 
  				</div>
  				<div class="col-md-4">
  					<a href=""><button class="superhero-api-link"><i class="fab fa-facebook"></i></button></a>

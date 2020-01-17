@@ -32,4 +32,10 @@ export class AppComponent {
   setLight(){
     this.theme.setLightTheme();
   }
+  setColored(){
+    this.theme.setColored();
+  }
+  setFiltered(){
+    this.theme.setFiltered();
+  }
 }

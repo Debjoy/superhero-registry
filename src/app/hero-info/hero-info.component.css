@@ -22,8 +22,8 @@
 }
 .hero-infobox .container .col-md-4 .box img{
     border-radius:20px;
-    -webkit-filter: sepia(0.8) hue-rotate(180deg) brightness(0.8) contrast(1.3);
-    filter: sepia(0.8) hue-rotate(180deg) brightness(0.8) contrast(1.3);
+    -webkit-filter:var(--imageColorFilter);
+    filter: var(--imageColorFilter);
 }
 .box{
     padding:15px;

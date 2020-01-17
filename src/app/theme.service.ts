@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Theme , light, dark} from './theme/theme';
+import { Theme , light, dark, colored, filtered } from './theme/theme';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
   private active: Theme= dark;
-  private availableThemes: Theme[]=[light, dark];
+  private availableThemes: Theme[]=[light, dark, colored, filtered];
   
   getAvailableThemes(): Theme[] {
     return this.availableThemes;
@@ -22,6 +22,14 @@ export class ThemeService {
 
   setDarkTheme(): void {
     this.setActiveTheme(dark);
+  }
+
+  setColored():void{
+    this.setActiveTheme(colored);
+  }
+
+  setFiltered():void{
+    this.setActiveTheme(filtered);
   }
 
   setLightTheme(): void {
