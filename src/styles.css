@@ -209,3 +209,6 @@
 .theme-toggle  .filtered{
     box-shadow:var(--filteredBoxShadow);
 }
+.option-heading{
+    opacity:0.9;
+}

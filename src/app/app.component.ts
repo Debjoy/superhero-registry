@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { HttpcallsService } from './httpcalls.service';
 import { Router } from '@angular/router';
 import { ThemeService } from './theme.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,29 @@ export class AppComponent {
   results:any;
   colored=false;
 
-  constructor(private service:HttpcallsService, private router:Router, private theme:ThemeService){}
+  constructor(private service:HttpcallsService, private router:Router, private theme:ThemeService, private cookie: CookieService){}
 
+  ngOnInit(){
+    if(!this.cookie.check("theme")){
+      this.cookie.set("theme","1");
+    }else{
+      if(this.cookie.get("theme")=="1"){
+        this.setDark();
+      }else{
+        this.setLight();
+      }
+    }
+    if(!this.cookie.check("color")){
+      this.cookie.set("color","1");
+    }else{
+      if(this.cookie.get("color")=="1"){
+        this.setFiltered();
+      }else{
+        this.setColored();
+      }
+    }
+  }
+  
   onSearch(){
     this.router.navigate(['search',this.formGrp.value.search_query.trim()]);
   }
@@ -29,16 +51,20 @@ export class AppComponent {
 
   setDark(){
     this.theme.setDarkTheme();
+    this.cookie.set("theme","1");
   }
   setLight(){
     this.theme.setLightTheme();
+    this.cookie.set("theme","0");
   }
   setColored(){
     this.theme.setColored();
     this.colored=true;
+    this.cookie.set("color","0");
   }
   setFiltered(){
     this.theme.setFiltered();
     this.colored=false;
+    this.cookie.set("color","1");
   }
 }

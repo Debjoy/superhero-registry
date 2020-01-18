@@ -10,6 +10,8 @@ import { NoResultComponent } from './no-result/no-result.component';
 import { HttpClientModule} from '@angular/common/http'
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
+import {CookieService } from 'ngx-cookie-service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       animationDuration: 300
     })
   ],
-  providers: [],
+  providers: [CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
