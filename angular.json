@@ -57,7 +57,8 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "crossOrigin": "anonymous"
             }
           }
         },

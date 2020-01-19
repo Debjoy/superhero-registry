@@ -10,6 +10,8 @@ import { NoResultComponent } from './no-result/no-result.component';
 import { HttpClientModule} from '@angular/common/http'
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import {CookieService } from 'ngx-cookie-service';
 
 @NgModule({
@@ -44,7 +46,7 @@ import {CookieService } from 'ngx-cookie-service';
       animationDuration: 300
     })
   ],
-  providers: [CookieService ],
+  providers: [CookieService, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
