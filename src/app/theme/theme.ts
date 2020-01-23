@@ -24,6 +24,7 @@ export const dark: Theme={
         "--lightThemeBoxShadow":"-2px -2px 3px #2b3744 ,2px 2px 3px #090d10 ",
         "--darkThemeBoxShadow":"inset 2px 2px 3px #090d10, inset  -2px -2px 3px #2b3744"  ,
 
+        "--frownface":"#ccc"
     }
 }
 
@@ -46,7 +47,7 @@ export const light: Theme={
         "--inputBoxInsetShadow":"inset 2px 2px 3px #c8c8c8, inset  -2px -2px 3px #ffffff",
         "--lightThemeBoxShadow":"inset 2px 2px 3px #c8c8c8, inset  -2px -2px 3px #ffffff",
         "--darkThemeBoxShadow":"-2px -2px 3px #ffffff ,2px 2px 3px #c8c8c8",
-
+        "--frownface":"#333"
     }
 }
 

@@ -4,6 +4,7 @@ import { HttpcallsService } from './httpcalls.service';
 import { Router } from '@angular/router';
 import { ThemeService } from './theme.service';
 import { CookieService } from 'ngx-cookie-service';
+import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,12 @@ export class AppComponent {
   constructor(private service:HttpcallsService, private router:Router, private theme:ThemeService, private cookie: CookieService){}
 
   ngOnInit(){
+    this.formGrp.controls.search_query.valueChanges.pipe(
+      debounceTime(1000),
+      distinctUntilChanged()).subscribe(res=>{
+        this.onSearch();
+      });
+
     if(!this.cookie.check("theme")){
       this.cookie.set("theme","1");
     }else{

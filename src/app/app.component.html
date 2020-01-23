@@ -25,10 +25,10 @@
  		</div>
  		<div class="search-box">
  			<div class="search-input">
- 				<form [formGroup]="formGrp" (ngSubmit)="onSearch()">
+ 		<form [formGroup]="formGrp" (ngSubmit)="onSearch()">
           <input type="text" formControlName="search_query" class="search-inputbox" placeholder="Search">&nbsp; &nbsp;  
           <button class="search-button" ><i class="fas fa-search"></i></button>
-        </form>
+		</form>
  			</div>
  		</div>
  		<div class="main-content">
@@ -54,7 +54,9 @@
 					</div>
 					<div class="theme-toggle" >
 							<strong>Image:</strong><br>
-							<span>Colored:</span> &nbsp;&nbsp;
+							<span><span style="color:#dc3545;">C</span><span style="color:#ffc107">o</span>
+							<span style="color:#28a745">l</span><span style="color:#007bff">o</span><span style="color:#dc3545;">r</span>
+							<span style="color:#ffc107">e</span><span style="color:#28a745">d</span>:</span> &nbsp;&nbsp;
 							<button class="colorise colored" (click)="setColored()"> <i class="fas fa-circle" *ngIf="colored"></i> <i class="far fa-circle" *ngIf="!colored"></i> 	</button><br>
 							<span>Filtered:</span> &nbsp;&nbsp;&nbsp;
 							<button class="colorise filtered" (click)="setFiltered()"> <i class="far fa-circle" *ngIf="colored"></i><i class="fas fa-circle" *ngIf="!colored"></i>  </button>
@@ -78,7 +80,7 @@
 					 <a href="https://github.com/Debjoy/superhero-registry"><p>Just Fork It &nbsp;<i class="fas fa-code-branch"></i></p></a>
  				</div>
  			</div>
- 			<div class="end-credits">made with <i class="fas fa-heart" style="color:var(--primaryDark);"></i> by <a href="https://www.atdebjoy.com/">Debjoy</a></div>
+ 			<div class="end-credits">made with <i class="fas fa-heart" style="color:#dc3545;"></i> by <a href="https://www.atdebjoy.com/">Debjoy</a></div>
  		</div>
  	</div>
  </body>
