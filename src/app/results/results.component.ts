@@ -33,4 +33,8 @@ export class ResultsComponent implements OnInit {
     )
   }
 
+  testing(obj){
+    console.log(obj.path[0]);
+  }
+
 }
