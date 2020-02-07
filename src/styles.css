@@ -55,6 +55,7 @@
        width:100%;
        background-image:url("assets/img/background3.png");
        background-size: contain;
+       background-position: top;
        background-repeat: no-repeat;
    }
    .head-title h1{
@@ -110,8 +111,7 @@
        opacity:0.5 ;
    }
    .footer{
-       padding:70px 5%;
-       padding-top:40px;
+       padding:40px 5%;
    }
    .footer-content{
        max-width:1200px !important;
