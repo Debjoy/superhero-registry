@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,  Router } from '@angular/router';
 import { HttpcallsService } from '../httpcalls.service';
 import { Location } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 })
 export class HeroInfoComponent implements OnInit {
 
-  constructor(private routeParam: ActivatedRoute, private _http: HttpcallsService, private location:Location) { }
+  constructor(private routeParam: ActivatedRoute, private _http: HttpcallsService, private location:Location, public routee:Router) { }
   
   loadingFlag=true;
 
@@ -31,6 +31,7 @@ export class HeroInfoComponent implements OnInit {
   }
 
   goback(){
+    //console.log(this.location.getState);
     this.location.back();
   }
 }

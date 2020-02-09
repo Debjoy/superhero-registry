@@ -67,13 +67,13 @@
 .back-button{
     background:var(--mainbackground-default) ;
     color:var(--primaryDark);
-    padding:15px 25px;
+    padding:10px 18px;
     border:none;
     border-radius:50px;
     transition:box-shadow ease 0.3s;
     margin:auto;
     font-weight:bold;
-    font-size:1.5rem;
+    font-size:1rem;
     box-shadow:var(--SmallBoxShadow) ;
     transition:box-shadow ease 0.3s;
 }
